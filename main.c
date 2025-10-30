@@ -4,22 +4,24 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-int main(int argc, char *argv[]) {
+	int main(int argc, char *argv[]) {
+		
+	int i; 
+	int a[size] = {1, 2, 3, 4, 5}; 
+	int b[size] = {1, 2, 7, 4, 5}; 
 	
-	int i;
-	int grade[size];
-	int sum=0;
+	int flag_same=1;
 	
-	printf("%i명의 점수를 입력하세요.\n", size); 
-	
-	for (i=0;i<size;i+=1)
-	 {
-	 scanf("%d", &grade[i]);
-	 sum+=grade[i];
+	for (i=0; i<size; i++) 
+	{
+	if (a[i]!=b[i])
+		 {
+		 printf("%i -th element is diffrent \n",i);
+		 flag_same = 0;
+	}
 	}
 	
+	printf("are a and b the same? %i\n", flag_same);
 	
-	printf("성적 평균 = %i\n", sum/size);
-	 
 	return 0;
 }
